@@ -2,63 +2,38 @@
 
 ## What This Example Demonstrates
 
-> **Note for students:** This section is included in example files only to help you study. Do not include it in your Side Quest submissions.
+This example shows a simple p5.js sketch embedded in an HTML page together with a separate controller image.
 
-This example introduces how to load and display images alongside shapes drawn with p5.js code.
-
-- `preload()` — loads images and sounds before the sketch starts, so they are ready to use in `setup()` and `draw()`
-- `setup()` — runs once at the start; used here to draw everything since nothing needs to animate
-- `draw()` — runs on a loop after `setup()`; left empty here since the sketch is static
-- `image()` — draws a loaded image onto the canvas at a specified position and size
-- `rect()`, `ellipse()`, `line()` — basic shape functions used to build the controller drawing
-- `fill()`, `stroke()`, `strokeWeight()` — control the colour and outline of shapes and text
-- `text()`, `textSize()`, `textAlign()` — display and style text on the canvas
-- `mousePressed()` — runs code automatically each time the mouse is clicked
-- `keyPressed()` — runs code automatically each time a key is pressed; used here as a debug tool to log mouse coordinates
+- `index.html` loads the CSS and p5.js library, then runs `sketch.js`.
+- The controller image is displayed using a standard HTML `<img>` element.
+- `sketch.js` creates a `400x400` canvas and draws a black background.
+- The sketch uses `rectMode(CENTER)`, `noStroke()`, `background()`, `fill()`, and `rect()` to draw stacked rectangular shapes.
+- The result is a static block-style arrangement rendered below the HTML image.
 
 ## Setup and Interaction Instructions
 
-To run the sketch locally, open `index.html` in Google Chrome. No additional setup is required.
+To view the project, open `index.html` in a browser. No interaction is required because the sketch is static.
 
-To play via GitHub Pages, visit the link provided on the submission page.
+If you prefer to use a local server, you can run this from the project folder:
 
-**How to interact:**
+```bash
+python3 -m http.server
+```
 
-- Click anywhere on the canvas to draw a random-coloured circle at that position.
-- Press **k** to log the current mouse coordinates to the Chrome console (useful for positioning shapes).
+Then open `http://localhost:8000`.
+
+## Files
+
+- `index.html` — page structure, stylesheet link, image element, and p5 script includes
+- `style.css` — page styling, black background, centered controller image
+- `sketch.js` — p5.js sketch that draws the block shapes on a black canvas
 
 ## Assets
 
 | File | Source |
 |------|--------|
-| `assets/images/controller.png` | Drawn by Karen Cochrane |
+| `images/controller.png` | Controller image asset |
 
 ## References
 
-N/A
-
-# Creative Drawing App
-
-## Setup and Interaction Instructions
-
-Open the GitHub Pages link in Google Chrome.
-
-Use the mouse to draw on the canvas.
-
-Features:
-- Multiple colors
-- Adjustable brush size
-- Eraser
-- Clear canvas
-- Save artwork
-
-## Assets
-
-No external assets were used.
-
-## References
-
-p5.js Reference
-https://p5js.org/reference/
-
-OpenAI ChatGPT used for debugging and UI assistance.
+- p5.js documentation: https://p5js.org/reference/

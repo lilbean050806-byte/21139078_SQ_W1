@@ -5,7 +5,7 @@ function setup() {
 }
 
 function draw() {
-  background(220);
+  background(0);
 
   let x = width / 2;
   let y = height / 2;
@@ -14,11 +14,11 @@ function draw() {
   fill(194, 140, 80);
 
 
-  rect(x - 35, y + 40, 70, 20, 3);
-  rect(x + 35, y + 40, 70, 20, 3);
+  rect(x - 40, y + 48, 70, 20, 3);
+  rect(x + 40, y + 48, 70, 20, 3);
 
   rect(x, y, 20, 70, 3);
 
-  rect(x - 35, y - 40, 70, 20, 3);
-  rect(x + 35, y - 40, 70, 20, 3);
+  rect(x - 40, y - 48, 70, 20, 3);
+  rect(x + 40, y - 48, 70, 20, 3);
 }
